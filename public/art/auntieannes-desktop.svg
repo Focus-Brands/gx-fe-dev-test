@@ -1,0 +1,7 @@
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="960" rx="48" fill="#FFF8F6"/>
+  <path d="M0 720C180 590 360 520 540 530C720 540 900 620 1080 700C1200 754 1320 770 1440 740V960H0V720Z" fill="#F8C7B8"/>
+  <path d="M0 260C220 170 440 150 660 210C880 270 1060 300 1440 210V620C1160 700 960 640 760 560C560 480 320 460 0 560V260Z" fill="#C2416E" fill-opacity="0.14"/>
+  <circle cx="1060" cy="290" r="128" fill="#C2416E" fill-opacity="0.16"/>
+  <text x="96" y="156" fill="#9F2955" font-size="44" font-family="Inter, Arial, sans-serif" font-weight="700">Auntie Anne's</text>
+</svg>

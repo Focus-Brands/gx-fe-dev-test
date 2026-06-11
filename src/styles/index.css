@@ -1,0 +1,201 @@
+@import 'tailwindcss';
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: #f1f5f9;
+    color: #0f172a;
+    font-family:
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      sans-serif;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@layer components {
+  .app-shell,
+  .storybook-shell {
+    @apply mx-auto flex min-h-screen w-full max-w-7xl items-center px-4 py-6 sm:px-6 lg:px-8;
+  }
+
+  .storybook-shell {
+    @apply max-w-none;
+  }
+
+  .heading {
+    @apply m-0 font-semibold text-slate-950;
+  }
+
+  .heading--one {
+    font-size: clamp(2.25rem, 5vw, 4.75rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+  }
+
+  .heading--two {
+    font-size: clamp(1.75rem, 3vw, 3rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+  }
+
+  .heading--three,
+  .heading--four,
+  .heading--five,
+  .heading--six {
+    line-height: 1.15;
+  }
+
+  .heading--three {
+    font-size: 1.5rem;
+  }
+
+  .heading--four {
+    font-size: 1.25rem;
+  }
+
+  .heading--five {
+    font-size: 1rem;
+  }
+
+  .heading--six {
+    font-size: 0.875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .badge {
+    @apply inline-flex w-fit items-center rounded-full border border-slate-300 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-slate-700;
+  }
+
+  .button-link {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full border px-5 py-3 text-sm font-semibold no-underline transition duration-200 ease-out;
+  }
+
+  .button-link:hover {
+    @apply -translate-y-0.5;
+  }
+
+  .button-link:focus-visible {
+    @apply outline outline-2 outline-offset-4 outline-slate-950;
+  }
+
+  .button-link--primary {
+    @apply border-slate-950 bg-slate-950 text-white hover:bg-slate-800;
+  }
+
+  .button-link--secondary {
+    @apply border-slate-300 bg-white text-slate-950 hover:border-slate-500;
+  }
+
+  .campaign-actions,
+  .campaign-hero__meta {
+    @apply flex flex-wrap items-center gap-3;
+  }
+
+  .campaign-hero {
+    @apply relative flex w-full overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-[0_1.5rem_4rem_rgba(15,23,42,0.12)];
+    min-height: 34rem;
+  }
+
+  .campaign-hero::before {
+    @apply pointer-events-none absolute inset-0 z-[1] opacity-0 content-[''];
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.76) 50%,
+      rgba(255, 255, 255, 0) 76%
+    );
+  }
+
+  .campaign-hero[data-gradient='visible']::before {
+    @apply opacity-100;
+  }
+
+  .campaign-hero__copy {
+    @apply relative z-[2] flex w-1/2 flex-col items-start justify-center gap-5 p-8 sm:p-10 lg:p-14;
+  }
+
+  .campaign-hero__eyebrow {
+    @apply m-0 text-xs font-semibold uppercase tracking-[0.14em] text-slate-600;
+  }
+
+  .campaign-hero__description {
+    @apply m-0 max-w-[38rem] text-base leading-7 text-slate-600 sm:text-lg;
+  }
+
+  .campaign-hero__legal {
+    @apply m-0 max-w-[42ch] text-xs leading-5 text-slate-500;
+  }
+
+  .campaign-hero__media {
+    @apply relative z-[2] flex w-1/2 p-4;
+  }
+
+  .responsive-media {
+    @apply block min-h-[28rem] w-full overflow-hidden rounded-[1.15rem] bg-slate-950;
+  }
+
+  .responsive-media img {
+    @apply h-full w-full object-cover;
+  }
+
+  @media (max-width: 47.99rem) {
+    .app-shell,
+    .storybook-shell {
+      @apply items-start py-4;
+    }
+
+    .campaign-hero {
+      @apply min-h-0 flex-col;
+    }
+
+    .campaign-hero::before {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(255, 255, 255, 0.2) 62%,
+        rgba(255, 255, 255, 0) 80%
+      );
+    }
+
+    .campaign-hero__copy,
+    .campaign-hero__media {
+      @apply w-full;
+    }
+
+    .campaign-hero__copy {
+      @apply p-6 sm:p-8;
+    }
+
+    .campaign-hero__media {
+      @apply p-2;
+    }
+
+    .responsive-media {
+      min-height: 22rem;
+    }
+  }
+}

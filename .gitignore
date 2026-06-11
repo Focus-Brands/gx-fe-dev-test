@@ -1,0 +1,7 @@
+node_modules
+dist
+storybook-static
+.vite
+test-results
+.candidate-package
+coverage

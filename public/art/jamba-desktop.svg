@@ -1,0 +1,7 @@
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="960" rx="48" fill="#F7FFF8"/>
+  <path d="M0 680C190 560 370 530 560 570C750 610 920 700 1120 720C1240 732 1340 720 1440 690V960H0V680Z" fill="#7DD3A7"/>
+  <path d="M0 250C220 150 450 140 660 220C870 300 1070 310 1440 200V620C1200 700 980 640 760 560C540 480 280 470 0 560V250Z" fill="#15803D" fill-opacity="0.14"/>
+  <circle cx="1040" cy="280" r="128" fill="#15803D" fill-opacity="0.16"/>
+  <text x="96" y="156" fill="#166534" font-size="44" font-family="Inter, Arial, sans-serif" font-weight="700">Jamba</text>
+</svg>
