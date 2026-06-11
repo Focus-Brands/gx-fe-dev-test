@@ -1,69 +1,37 @@
 # Senior Front-End Engineer Assessment
 
-## Objective
+Turn the provided static campaign hero into a dynamic, branded experience.
 
-Use Storybook, `core-ui`, and `core-utils` to demonstrate how you would connect
-mock Contentful data and design tokens to a reusable campaign hero.
-
-The default Vite app is only a neutral reference state. It must remain usable
-without importing from `src/mock-contentful` or `src/core-utils`.
+The page already contains a reusable campaign hero and a visible, controlled
+brand switcher. The switcher intentionally does not update the hero content or
+apply themes in the starter state.
 
 ## Required work
 
-1. Implement `mapCampaignHeroProps` in
-   `src/core-utils/mapCampaignHeroProps.ts`.
-2. Map every supported mock Contentful campaign to the
-   `CampaignHeroProps` contract. Keep Contentful-specific field access out of
-   `core-ui`.
-3. Create a reusable, controlled theme switcher component in `core-ui`. It must
-   be agnostic to the supplied brand names and token values.
-4. Add a Storybook integration story that:
-   - renders the mapped mock campaign data;
-   - allows switching between Auntie Anne's, Jamba, and Moe's;
-   - applies the matching values from `mockDesignTokens`;
-   - changes the hero through semantic design tokens, not brand checks inside
-     React components.
-5. Add focused tests for the mapper and theme switcher.
+1. Implement the mock Contentful mapper in `core-utils`.
+2. Connect the selected brand to the matching campaign JSON.
+3. Render the mapped campaign through `CampaignHero`.
+4. Convert the matching design-token JSON into semantic CSS custom properties.
+5. Apply the semantic tokens at a wrapper boundary.
+6. Make the app and Storybook demonstrate all three branded campaign heroes.
+7. Test the mapper and the content and theme changes triggered by the switcher.
 
-## Design-token expectations
+## Architecture expectations
 
-- Expose a small semantic token contract through CSS custom properties.
-- Apply the selected token set at a wrapper boundary.
-- Consume semantic variables in shared UI styles.
-- Do not create selectors or component branches for individual brands.
-- Ensure the selected brand updates both campaign content and presentation.
-
-The shape of the semantic CSS variables is your design decision. The raw token
-data is provided in `src/mock-contentful/designTokens.ts`.
+- `core-ui` remains business-agnostic.
+- Contentful-specific field access remains in `core-utils`.
+- Brand selection and token application remain outside `CampaignHero`.
+- Shared styles consume semantic variables rather than brand selectors.
+- No brand-specific branches are added to reusable UI components.
 
 ## Evaluation
 
-We will review:
-
-- separation between external data, mapping logic, and presentational UI;
-- atomic, reusable component design;
-- TypeScript correctness and handling of optional or malformed content;
-- Storybook controls and clarity of the branded demonstration;
-- responsive behavior and accessibility;
-- test quality and maintainability;
-- production readiness without unnecessary framework or state complexity.
-
-## Constraints
-
-- Keep files under 1000 lines.
-- Prefer flexbox for layout.
-- Do not add routing or a global state library.
-- Do not hardcode brand conditionals in `CampaignHero` or its child components.
-- Do not replace the mock data with already-normalized fixtures.
-- Keep the neutral default app independent from the assessment integration.
+We will review component design, data mapping, token architecture, TypeScript,
+accessibility, responsive behavior, Storybook usage, testing, and overall
+production readiness.
 
 ## Verification
 
 ```bash
-npm run lint
-npm run typecheck
-npm run test
-npm run test:browser
-npm run build
-npm run build:storybook
+npm run assessment:check
 ```

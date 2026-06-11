@@ -1,4 +1,11 @@
-import { CampaignHero } from './core-ui';
+import { useState } from 'react';
+import { BrandSwitcher, CampaignHero } from './core-ui';
+
+const brandOptions = [
+  { label: "Auntie Anne's", value: 'auntie-annes' },
+  { label: 'Jamba', value: 'jamba' },
+  { label: "Moe's", value: 'moes' },
+];
 
 const starterHero = {
   id: 'starter-campaign',
@@ -16,9 +23,19 @@ const starterHero = {
 };
 
 export default function App() {
+  const [selectedBrand, setSelectedBrand] = useState(brandOptions[0].value);
+
   return (
     <main className="app-shell">
-      <CampaignHero {...starterHero} />
+      <div className="assessment-stage">
+        <BrandSwitcher
+          label="Brand preview"
+          onChange={setSelectedBrand}
+          options={brandOptions}
+          value={selectedBrand}
+        />
+        <CampaignHero {...starterHero} />
+      </div>
     </main>
   );
 }

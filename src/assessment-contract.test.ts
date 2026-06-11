@@ -18,6 +18,7 @@ describe('starter assessment boundaries', () => {
     expect(appSource).not.toContain('mock-contentful');
     expect(appSource).not.toContain('core-utils');
     expect(appSource).not.toContain('mockDesignTokens');
+    expect(appSource).toContain('BrandSwitcher');
   });
 
   it('does not ship a completed brand toolbar in the starter preview', () => {
