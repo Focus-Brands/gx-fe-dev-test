@@ -18,7 +18,7 @@ export type CampaignHeroProps = {
   eyebrow?: string;
   badgeLabel?: string;
   media: CampaignMedia;
-  primaryAction: CampaignAction;
+  primaryAction?: CampaignAction;
   secondaryAction?: CampaignAction | null;
   legalDisclaimer?: string;
   showGradient?: boolean;

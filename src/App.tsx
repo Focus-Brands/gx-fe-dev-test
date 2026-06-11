@@ -9,18 +9,14 @@ const brandOptions = [
 
 const starterHero = {
   id: 'starter-campaign',
-  title: 'Make the next campaign impossible to miss.',
+  title: `Let's Begin!`,
   description:
-    'A simple, responsive campaign hero ready to be connected to content and brand themes.',
+    'Use the provided campaign data and design tokens to bring each brand’s experience to life.',
   media: {
     desktopSrc: '/art/campaign-default.png',
     alt: 'Campaign image placeholder',
     width: 648,
     height: 420,
-  },
-  primaryAction: {
-    label: 'Explore the campaign',
-    href: '#campaign',
   },
 };
 

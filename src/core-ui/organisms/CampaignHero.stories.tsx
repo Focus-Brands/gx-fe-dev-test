@@ -24,10 +24,6 @@ const meta = {
       width: 648,
       height: 420,
     },
-    primaryAction: {
-      label: 'Primary action',
-      href: '#primary',
-    },
   },
 } satisfies Meta<typeof CampaignHero>;
 
@@ -40,6 +36,10 @@ export const WithOptionalContent: Story = {
   args: {
     eyebrow: 'Optional eyebrow',
     badgeLabel: 'Optional badge',
+    primaryAction: {
+      label: 'Primary action',
+      href: '#primary',
+    },
     secondaryAction: {
       label: 'Secondary action',
       href: '#secondary',

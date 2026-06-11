@@ -42,7 +42,9 @@ export function CampaignHero({
           <p className="campaign-hero__description">{description}</p>
         ) : null}
 
-        <CampaignActions primary={primaryAction} secondary={secondaryAction} />
+        {primaryAction || secondaryAction ? (
+          <CampaignActions primary={primaryAction} secondary={secondaryAction} />
+        ) : null}
 
         {legalDisclaimer ? (
           <p className="campaign-hero__legal">{legalDisclaimer}</p>
