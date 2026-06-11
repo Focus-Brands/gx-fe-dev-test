@@ -1,4 +1,4 @@
-# Campaign Hero Front-End Assessment
+# Campaign Hero
 
 ## Goal
 
@@ -15,22 +15,14 @@ The starter page includes:
 - Storybook stories for the provided UI components.
 
 The brand switcher intentionally changes only its selected state. It does not
-change the hero content or apply a brand theme. Wiring that behavior is the
-candidate exercise.
+change the hero content or visual theme.
 
-## Candidate goals
+## Goals
 
-1. Implement `mapCampaignHeroProps` in
-   `src/core-utils/mapCampaignHeroProps.ts`.
-2. Use the selected brand to load the matching campaign from
-   `src/mock-contentful/campaigns.ts`.
-3. Map the branded JSON to the business-agnostic `CampaignHeroProps` contract.
-4. Update the hero content when the brand switcher selection changes.
-5. Map the matching values from
-   `src/mock-contentful/designTokens.ts` to semantic CSS custom properties.
-6. Apply those semantic tokens so the selected brand changes the hero theme.
-7. Demonstrate the completed dynamic experience in the app and Storybook.
-8. Add focused tests for the content mapping and brand-switching behavior.
+1. Transform the branded campaign data into the hero's existing prop contract.
+2. Update the hero content when the selected brand changes.
+3. Use the provided design tokens to give each brand a distinct visual theme.
+4. Demonstrate the completed experience in both the app and Storybook.
 
 ## Expected result
 
@@ -41,10 +33,10 @@ Selecting Auntie Anne's, Jamba, or Moe's should update:
 - calls to action and optional content;
 - colors, borders, radii, and elevation from the matching design tokens.
 
-The solution should keep:
+Keep:
 
-- Contentful field knowledge inside `core-utils`;
-- brand JSON and token selection outside `core-ui`;
+- data transformation inside `core-utils`;
+- branded data and theme decisions outside `core-ui`;
 - shared UI components reusable and free of brand-specific conditionals;
 - the layout responsive and accessible.
 
@@ -64,12 +56,6 @@ npm run dev
 npm run storybook
 ```
 
-## Verification
+## Production builds
 
-The starter baseline passes:
-
-```bash
-npm run assessment:check
-```
-
-Keep the baseline checks green and add tests for the completed dynamic behavior.
+Use `npm run build` and `npm run build:storybook` to verify both surfaces.

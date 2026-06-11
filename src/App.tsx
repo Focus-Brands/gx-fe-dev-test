@@ -13,8 +13,10 @@ const starterHero = {
   description:
     'A simple, responsive campaign hero ready to be connected to content and brand themes.',
   media: {
-    desktopSrc: '/art/assessment-placeholder.svg',
-    alt: 'Abstract campaign artwork',
+    desktopSrc: '/art/campaign-default.png',
+    alt: 'Campaign image placeholder',
+    width: 648,
+    height: 420,
   },
   primaryAction: {
     label: 'Explore the campaign',
@@ -27,7 +29,8 @@ export default function App() {
 
   return (
     <main className="app-shell">
-      <div className="assessment-stage">
+      <div className="campaign-stage">
+        {/* TODO: Make the selected brand update the hero content and visual theme. */}
         <BrandSwitcher
           label="Brand preview"
           onChange={setSelectedBrand}

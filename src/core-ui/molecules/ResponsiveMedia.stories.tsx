@@ -6,8 +6,10 @@ const meta = {
   component: ResponsiveMedia,
   tags: ['autodocs'],
   args: {
-    desktopSrc: '/art/assessment-placeholder.svg',
-    alt: 'Abstract campaign artwork',
+    desktopSrc: '/art/campaign-default.png',
+    alt: 'Campaign image placeholder',
+    width: 648,
+    height: 420,
   },
 } satisfies Meta<typeof ResponsiveMedia>;
 

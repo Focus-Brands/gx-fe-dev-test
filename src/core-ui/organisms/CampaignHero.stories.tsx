@@ -9,7 +9,7 @@ const meta = {
     docs: {
       description: {
         component:
-          'A presentation-only hero. Complete the assessment by mapping the mock Contentful entries to this prop contract and adding a token-driven theme switcher in Storybook.',
+          'A presentation-only campaign hero with required and optional content examples.',
       },
     },
   },
@@ -17,10 +17,12 @@ const meta = {
     id: 'storybook-starter',
     title: 'A neutral campaign hero',
     description:
-      'This story intentionally uses direct props and does not import mock Contentful data or brand design tokens.',
+      'This story uses direct props and a neutral visual treatment.',
     media: {
-      desktopSrc: '/art/assessment-placeholder.svg',
-      alt: 'Abstract campaign artwork',
+      desktopSrc: '/art/campaign-default.png',
+      alt: 'Campaign image placeholder',
+      width: 648,
+      height: 420,
     },
     primaryAction: {
       label: 'Primary action',
@@ -46,3 +48,5 @@ export const WithOptionalContent: Story = {
     showGradient: true,
   },
 };
+
+// TODO: Add a story that demonstrates dynamic branded campaign content and themes.

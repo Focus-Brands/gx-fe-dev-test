@@ -1,7 +1,0 @@
-<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1440" height="960" rx="48" fill="#FDF7F2"/>
-  <path d="M0 700C220 580 400 540 580 580C760 620 920 700 1120 730C1240 748 1340 740 1440 710V960H0V700Z" fill="#FDBA74"/>
-  <path d="M0 280C220 190 440 180 660 240C880 300 1080 320 1440 220V620C1160 700 980 640 760 560C540 480 280 470 0 560V280Z" fill="#C2410C" fill-opacity="0.14"/>
-  <circle cx="1040" cy="280" r="128" fill="#C2410C" fill-opacity="0.16"/>
-  <text x="96" y="156" fill="#9A3412" font-size="44" font-family="Inter, Arial, sans-serif" font-weight="700">Moe's</text>
-</svg>
