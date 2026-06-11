@@ -5,3 +5,4 @@ storybook-static
 test-results
 .candidate-package
 coverage
+.idea
