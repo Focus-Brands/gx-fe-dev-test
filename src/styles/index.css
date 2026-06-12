@@ -42,9 +42,21 @@
   }
 
   .app-shell {
-    /* Brand themes may override these semantic values at the app boundary. */
-    background: var(--campaign-page, #f1f5f9);
-    color: var(--campaign-text, #0f172a);
+    /* Neutral defaults make every semantic token resolvable before a brand is applied. */
+    --campaign-page: #f1f5f9;
+    --campaign-surface: #ffffff;
+    --campaign-text: #0f172a;
+    --campaign-muted-text: #475569;
+    --campaign-accent: #0f172a;
+    --campaign-accent-hover: #1e293b;
+    --campaign-on-accent: #ffffff;
+    --campaign-border: #e2e8f0;
+    --campaign-hero-radius: 1.5rem;
+    --campaign-action-radius: 999px;
+    --campaign-hero-shadow: 0 1.5rem 4rem rgba(15, 23, 42, 0.12);
+
+    background: var(--campaign-page);
+    color: var(--campaign-text);
     transition:
       background-color 200ms ease,
       color 200ms ease;
@@ -64,44 +76,44 @@
 
   .brand-switcher__label {
     @apply text-xs font-semibold uppercase tracking-[0.12em];
-    color: var(--campaign-muted-text, #475569);
+    color: var(--campaign-muted-text);
   }
 
   .brand-switcher__options {
     @apply flex max-w-full flex-wrap gap-2 border p-1 shadow-sm;
-    background: var(--campaign-surface, #ffffff);
-    border-color: var(--campaign-border, #e2e8f0);
-    border-radius: var(--campaign-action-radius, 999px);
+    background: var(--campaign-surface);
+    border-color: var(--campaign-border);
+    border-radius: var(--campaign-action-radius);
   }
 
   .brand-switcher__option {
     @apply min-h-10 cursor-pointer border-0 bg-transparent px-4 py-2 text-sm font-semibold transition-colors;
-    border-radius: var(--campaign-action-radius, 999px);
-    color: var(--campaign-muted-text, #475569);
+    border-radius: var(--campaign-action-radius);
+    color: var(--campaign-muted-text);
   }
 
   .brand-switcher__option:hover {
     background: color-mix(
       in srgb,
-      var(--campaign-accent, #0f172a) 10%,
+      var(--campaign-accent) 10%,
       transparent
     );
-    color: var(--campaign-text, #0f172a);
+    color: var(--campaign-text);
   }
 
   .brand-switcher__option:focus-visible {
     @apply outline outline-2 outline-offset-2;
-    outline-color: var(--campaign-accent, #0f172a);
+    outline-color: var(--campaign-accent);
   }
 
   .brand-switcher__option[aria-pressed='true'] {
-    background: var(--campaign-accent, #0f172a);
-    color: var(--campaign-on-accent, #ffffff);
+    background: var(--campaign-accent);
+    color: var(--campaign-on-accent);
   }
 
   .heading {
     @apply m-0 font-semibold;
-    color: var(--campaign-text, #0f172a);
+    color: var(--campaign-text);
   }
 
   .heading--one {
@@ -143,15 +155,15 @@
 
   .badge {
     @apply inline-flex w-fit items-center border px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em];
-    background: var(--campaign-surface, #ffffff);
-    border-color: var(--campaign-border, #cbd5e1);
-    border-radius: var(--campaign-action-radius, 999px);
-    color: var(--campaign-text, #334155);
+    background: var(--campaign-surface);
+    border-color: var(--campaign-border);
+    border-radius: var(--campaign-action-radius);
+    color: var(--campaign-text);
   }
 
   .button-link {
     @apply inline-flex min-h-12 items-center justify-center border px-5 py-3 text-sm font-semibold no-underline transition duration-200 ease-out;
-    border-radius: var(--campaign-action-radius, 999px);
+    border-radius: var(--campaign-action-radius);
   }
 
   .button-link:hover {
@@ -160,28 +172,28 @@
 
   .button-link:focus-visible {
     @apply outline outline-2 outline-offset-4;
-    outline-color: var(--campaign-accent, #0f172a);
+    outline-color: var(--campaign-accent);
   }
 
   .button-link--primary {
-    background: var(--campaign-accent, #0f172a);
-    border-color: var(--campaign-accent, #0f172a);
-    color: var(--campaign-on-accent, #ffffff);
+    background: var(--campaign-accent);
+    border-color: var(--campaign-accent);
+    color: var(--campaign-on-accent);
   }
 
   .button-link--primary:hover {
-    background: var(--campaign-accent-hover, #1e293b);
-    border-color: var(--campaign-accent-hover, #1e293b);
+    background: var(--campaign-accent-hover);
+    border-color: var(--campaign-accent-hover);
   }
 
   .button-link--secondary {
-    background: var(--campaign-surface, #ffffff);
-    border-color: var(--campaign-border, #cbd5e1);
-    color: var(--campaign-text, #0f172a);
+    background: var(--campaign-surface);
+    border-color: var(--campaign-border);
+    color: var(--campaign-text);
   }
 
   .button-link--secondary:hover {
-    border-color: var(--campaign-accent, #64748b);
+    border-color: var(--campaign-accent);
   }
 
   .campaign-actions,
@@ -191,13 +203,10 @@
 
   .campaign-hero {
     @apply relative flex w-full overflow-hidden border;
-    background: var(--campaign-surface, #ffffff);
-    border-color: var(--campaign-border, #e2e8f0);
-    border-radius: var(--campaign-hero-radius, 1.5rem);
-    box-shadow: var(
-      --campaign-hero-shadow,
-      0 1.5rem 4rem rgba(15, 23, 42, 0.12)
-    );
+    background: var(--campaign-surface);
+    border-color: var(--campaign-border);
+    border-radius: var(--campaign-hero-radius);
+    box-shadow: var(--campaign-hero-shadow);
     min-height: 34rem;
     transition:
       background-color 200ms ease,
@@ -210,8 +219,8 @@
     @apply pointer-events-none absolute inset-0 z-[1] opacity-0 content-[''];
     background: linear-gradient(
       90deg,
-      color-mix(in srgb, var(--campaign-surface, #ffffff) 98%, transparent) 0%,
-      color-mix(in srgb, var(--campaign-surface, #ffffff) 76%, transparent) 50%,
+      color-mix(in srgb, var(--campaign-surface) 98%, transparent) 0%,
+      color-mix(in srgb, var(--campaign-surface) 76%, transparent) 50%,
       transparent 76%
     );
   }
@@ -226,17 +235,17 @@
 
   .campaign-hero__eyebrow {
     @apply m-0 text-xs font-semibold uppercase tracking-[0.14em];
-    color: var(--campaign-muted-text, #475569);
+    color: var(--campaign-muted-text);
   }
 
   .campaign-hero__description {
     @apply m-0 max-w-[38rem] text-base leading-7 sm:text-lg;
-    color: var(--campaign-muted-text, #475569);
+    color: var(--campaign-muted-text);
   }
 
   .campaign-hero__legal {
     @apply m-0 max-w-[42ch] text-xs leading-5;
-    color: var(--campaign-muted-text, #64748b);
+    color: var(--campaign-muted-text);
   }
 
   .campaign-hero__media {
@@ -264,10 +273,8 @@
     .campaign-hero::before {
       background: linear-gradient(
         180deg,
-        color-mix(in srgb, var(--campaign-surface, #ffffff) 98%, transparent)
-          0%,
-        color-mix(in srgb, var(--campaign-surface, #ffffff) 20%, transparent)
-          62%,
+        color-mix(in srgb, var(--campaign-surface) 98%, transparent) 0%,
+        color-mix(in srgb, var(--campaign-surface) 20%, transparent) 62%,
         transparent 80%
       );
     }
