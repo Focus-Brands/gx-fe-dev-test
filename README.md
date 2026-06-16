@@ -14,6 +14,7 @@ selected state.
 - Apply the selected brand's colors, borders, radii, and elevation.
 - Demonstrate the completed experience in both the app and Storybook.
 - Keep the layout responsive and accessible.
+- Node version 20 or higher.
 
 ## Boundaries
 
@@ -22,6 +23,10 @@ selected state.
 - shared UI components remain reusable and free of brand-specific conditionals.
 
 ## Commands
+
+```bash
+nvm use
+```
 
 ```bash
 npm install
