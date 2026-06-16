@@ -1,10 +1,16 @@
 # Campaign Hero
 
 ## Objective
-
-Make the static campaign hero dynamic using the provided branded JSON and
-design tokens. The provided brand switcher intentionally changes only its
-selected state.
+You are joining a project that already includes a reusable campaign hero component library and established 
+design system primitives. Your task is to make the hero experience brand-aware and data-driven by connecting 
+branded campaign data from the mock-contentful source to the existing hero contract. Brand switching should 
+automatically update content, media, actions, optional metadata, and visual theming (colors, borders, radius, 
+and elevation tokens). All transformation and mapping logic should live in core-utils 
+(primarily mapCampaignHeroProps.ts), while core-ui components remain generic, reusable, and free of brand-specific 
+conditionals. Brand data and token decisions should be handled outside of UI primitives. Your implementation should be 
+testable through both src/App.tsx and Storybook stories, and should demonstrate strong separation of concerns, clean 
+TypeScript contracts, scalable architecture for future brands and content models, responsive design, and accessibility 
+best practices.
 
 ## Requirements
 
